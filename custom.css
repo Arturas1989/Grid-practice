@@ -1,0 +1,189 @@
+
+.soc{
+    display: none;
+}
+.ads{
+    display: none;
+}
+
+.container{
+    display: grid;
+    row-gap: 40px;
+    grid-template-columns: 360px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "hero"
+    "services-container"
+    "services-container"
+    "services-container"
+    "freelance"
+    "testimonials-container"
+    "testimonials-container"
+    "footer"
+    "nav";
+}
+.header{
+    grid-area: header;
+    height: 100px;
+    background-color: rgb(10, 166, 238);
+}
+.hero{
+    grid-area: hero;
+    height: 100px;
+    background-color: rgb(114, 199, 106);
+    
+}
+.services-container{
+    display: grid;
+    row-gap: 15px;
+    background-color: rgb(27, 40, 119);
+    grid-template-columns: 360px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "services1"
+    "services2"
+    "services3";
+    grid-area: services-container;
+}
+.services1{
+    grid-area: services1;
+    height: 100px;
+    background-color: brown;  
+}
+.services2{
+    grid-area: services2;
+    height: 100px;
+    background-color: red; 
+}
+.services3{
+    grid-area: services3;
+    height: 100px;
+    background-color: aqua;  
+}
+.freelance{
+    grid-area: freelance;
+    height: 100px;
+    background-color: rgb(5, 5, 236);
+}
+.testimonials-container {
+    display: grid;
+    row-gap: 15px;
+    background-color: rgb(132, 146, 131);
+    grid-template-columns: 360px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "testimonials1"
+    "testimonials2";
+    grid-area: testimonials-container;
+}
+
+.testimonials1{
+    grid-area: testimonials1;
+    height: 100px;
+    background-color: rgb(74, 245, 7);
+}
+.testimonials2{
+    grid-area: testimonials2;
+    height: 100px;
+    background-color: rgb(247, 231, 10);
+}
+.footer{
+    grid-area: footer;
+    height: 100px;
+    background-color: rgb(245, 7, 7);
+}
+.nav{
+    grid-area: nav;
+    height: 100px;
+    background-color: rgb(102, 13, 65);
+}
+
+@media (min-width: 820px) {
+    .container{
+        grid-template-columns: 360px 360px;
+        grid-template-areas:
+        "nav-soc-container nav-soc-container" 
+        "hero hero"
+        "services-container services-container"
+        "testimonials-container testimonials-container"
+        "freelance freelance"
+        "footer footer";   
+    }
+    .services-container{
+        column-gap: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "services1 services2";
+    }
+    .testimonials-container {
+        column-gap: 15px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "testimonials1 testimonials2";
+    }
+    .nav-soc-container{
+        display: grid;
+        grid-template-columns: 50px 150px;
+        grid-template-rows: auto;
+        justify-content: space-between;
+        grid-template-areas: 
+        ". soc";
+        grid-area: nav-soc-container;
+    }
+   .soc{
+    display: grid;
+    background-color: blueviolet;
+    grid-area: soc;
+    height: 100px;
+    justify-self: end;
+   }
+   .services3{
+        display: none;
+   }
+   .header{
+        display: none;
+    }
+    .nav{
+        display: none;
+    }
+}
+
+@media (min-width: 1180px) {
+    .container{
+        column-gap: 15px;
+        grid-template-columns: 450px 450px 180px;
+        grid-template-areas:
+        "nav-soc-container nav-soc-container nav-soc-container" 
+        "hero hero hero"
+        "testimonials-container testimonials-container ads"
+        "services-container services-container ads"
+        "freelance freelance ads"
+        "footer footer footer";   
+    }
+    .services-container{
+        column-gap: 15px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "services1 services2 services3";
+    }
+    .nav-soc-container{
+        grid-template-columns: 100px 200px 150px;
+        grid-template-areas: 
+        ". nav soc";
+    }
+    .soc{
+        justify-self: normal;
+    }
+    .services3{
+        display: grid;
+   }
+    .nav{
+       display: grid;
+    }
+    .ads{
+        display: grid;
+        grid-area: ads;
+        background-color: cadetblue;
+    }   
+}
