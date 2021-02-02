@@ -28,11 +28,13 @@
 }
 .header{
     grid-area: header;
+    width:100%;
     height: 100px;
     background-color: rgb(10, 166, 238);
 }
 .hero{
     grid-area: hero;
+    width: 100%;
     height: 100px;
     background-color: rgb(114, 199, 106);
     
@@ -51,21 +53,25 @@
 }
 .services1{
     grid-area: services1;
+    width: 100%;
     height: 100px;
     background-color: brown;  
 }
 .services2{
     grid-area: services2;
+    width: 100%;
     height: 100px;
     background-color: red; 
 }
 .services3{
     grid-area: services3;
+    width: 100%;
     height: 100px;
     background-color: aqua;  
 }
 .freelance{
     grid-area: freelance;
+    width: 100%;
     height: 100px;
     background-color: rgb(5, 5, 236);
 }
@@ -83,21 +89,25 @@
 
 .testimonials1{
     grid-area: testimonials1;
+    width: 100%;
     height: 100px;
     background-color: rgb(74, 245, 7);
 }
 .testimonials2{
     grid-area: testimonials2;
+    width: 100%;
     height: 100px;
     background-color: rgb(247, 231, 10);
 }
 .footer{
     grid-area: footer;
+    width: 100%;
     height: 100px;
     background-color: rgb(245, 7, 7);
 }
 .nav{
     grid-area: nav;
+    width: 100%;
     height: 100px;
     background-color: rgb(102, 13, 65);
 }
@@ -143,8 +153,9 @@
     display: grid;
     background-color: blueviolet;
     grid-area: soc;
+    width: 100%;
     height: 100px;
-    justify-self: end;
+    justify-self: center;
    }
    .services3{
         display: none;
@@ -191,6 +202,7 @@
     }
     .ads{
         display: grid;
+        width: 100%;
         grid-area: ads;
         background-color: cadetblue;
     }   
