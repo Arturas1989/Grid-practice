@@ -5,6 +5,9 @@
 .ads{
     display: none;
 }
+.empty{
+    display: none;
+}
 
 .container{
     display: grid;
@@ -128,8 +131,13 @@
         grid-template-rows: auto;
         justify-content: space-between;
         grid-template-areas: 
-        ". soc";
+        "empty soc";
         grid-area: nav-soc-container;
+    }
+    .empty {
+        display: grid;
+        border: 1px solid red;
+        height: 50px;
     }
    .soc{
     display: grid;
@@ -168,9 +176,9 @@
         "services1 services2 services3";
     }
     .nav-soc-container{
-        grid-template-columns: 100px 200px 150px;
+        grid-template-columns: 50px 200px 150px;
         grid-template-areas: 
-        ". nav soc";
+        "empty nav soc";
     }
     .soc{
         justify-self: normal;
